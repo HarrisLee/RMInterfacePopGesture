@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NSObject+Equal.h"
 
 @interface IndexViewController : UIViewController
 

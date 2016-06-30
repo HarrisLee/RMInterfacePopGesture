@@ -15,6 +15,7 @@
 		443EB7411D221CEC00AB2FA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443EB73F1D221CEC00AB2FA7 /* LaunchScreen.storyboard */; };
 		443EB74A1D221D1900AB2FA7 /* RMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443EB7491D221D1900AB2FA7 /* RMNavigationViewController.m */; };
 		443EB74D1D221DAD00AB2FA7 /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443EB74C1D221DAD00AB2FA7 /* IndexViewController.m */; };
+		445D55801D237BAE004D1EF4 /* NSObject+Equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 445D557F1D237BAE004D1EF4 /* NSObject+Equal.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		443EB7491D221D1900AB2FA7 /* RMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMNavigationViewController.m; sourceTree = "<group>"; };
 		443EB74B1D221DAD00AB2FA7 /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
 		443EB74C1D221DAD00AB2FA7 /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		445D557E1D237BAE004D1EF4 /* NSObject+Equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Equal.h"; sourceTree = "<group>"; };
+		445D557F1D237BAE004D1EF4 /* NSObject+Equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Equal.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 		443EB7301D221CEC00AB2FA7 /* RMInterfacePopGestureEx */ = {
 			isa = PBXGroup;
 			children = (
+				445D557E1D237BAE004D1EF4 /* NSObject+Equal.h */,
+				445D557F1D237BAE004D1EF4 /* NSObject+Equal.m */,
 				443EB7341D221CEC00AB2FA7 /* AppDelegate.h */,
 				443EB7351D221CEC00AB2FA7 /* AppDelegate.m */,
 				443EB7371D221CEC00AB2FA7 /* ViewController.h */,
@@ -162,6 +167,7 @@
 			files = (
 				443EB7391D221CEC00AB2FA7 /* ViewController.m in Sources */,
 				443EB74A1D221D1900AB2FA7 /* RMNavigationViewController.m in Sources */,
+				445D55801D237BAE004D1EF4 /* NSObject+Equal.m in Sources */,
 				443EB7361D221CEC00AB2FA7 /* AppDelegate.m in Sources */,
 				443EB7331D221CEC00AB2FA7 /* main.m in Sources */,
 				443EB74D1D221DAD00AB2FA7 /* IndexViewController.m in Sources */,
@@ -319,6 +325,7 @@
 				443EB7471D221CEC00AB2FA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
