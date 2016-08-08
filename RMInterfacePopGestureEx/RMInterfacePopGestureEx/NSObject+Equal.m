@@ -16,22 +16,27 @@
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
 {
     NSString *sel = NSStringFromSelector(aSelector);
-    if ([sel rangeOfString:@"isEqualToString"].location == 0)
-    {
+    if ([sel rangeOfString:@"isEqualToString"].location == 0) {
         return [NSMethodSignature signatureWithObjCTypes:"v@:@"];
     }
-    else
-    {
+    else {
         Method method = class_getInstanceMethod([self class], aSelector);
-        return [NSMethodSignature signatureWithObjCTypes:method_copyReturnType(method)];
+        struct objc_method_description *desc = method_getDescription(method);
+        if (desc == NULL || desc->name == NULL){
+            return nil;
+        }
+        NSLog(@"method name is %@",NSStringFromSelector(desc->name));
+        return [NSMethodSignature signatureWithObjCTypes:desc->types];
     }
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
     if ([self respondsToSelector:[anInvocation selector]]) {
+        [anInvocation invokeWithTarget:self];
         NSLog(@"invocation %@",NSStringFromSelector([anInvocation selector]));
-    } else {
+    }
+    else {
         NSLog(@"%@  not invocation %@",[[self class] description],NSStringFromSelector([anInvocation selector]));
     }
 }

@@ -56,9 +56,8 @@ BOOL StringIsEqualToString(NSString *aString,NSString *bString)
 //    [button addTarget:self action:@selector(tapMe:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    
     NSString *name = @"name";
-//    name = [[NSNull alloc] init];
+    name = [[NSNull alloc] init];
     NSLog(@"%@",[name isEqualToString:@"name"] ? @"YES" : @"NO");
 
 //    NSObject *obj = [[NSObject alloc] init];
@@ -76,11 +75,18 @@ BOOL StringIsEqualToString(NSString *aString,NSString *bString)
     NSLog(@"%@",StringIsEqualToString(@"1", [dic valueForKey:@"key"]) ? @"YES" : @"NO");
     
     
-    
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 100, 300, 300)];
+    webView.backgroundColor = [UIColor redColor];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]]];
     [self.view addSubview:webView];
     
-    
+    UITableView *tableView = [[UITableView alloc] init];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    NSLog(@"TOUCH");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
